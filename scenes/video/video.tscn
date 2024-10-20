@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2l6mevdlb4op"]
+
+[ext_resource type="VideoStream" path="res://assets/video/killa-bad1_3.ogv" id="1_kixkt"]
+[ext_resource type="Script" path="res://scenes/video/video.gd" id="1_ugjiq"]
+
+[node name="video" type="Node2D"]
+position = Vector2(125, 0)
+scale = Vector2(1.3, 1.3)
+script = ExtResource("1_ugjiq")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1040.0
+offset_bottom = 1952.0
+stream = ExtResource("1_kixkt")
+autoplay = true
+bus = &"Music"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -150
+offset_left = -119.231
+offset_top = -16.1538
+offset_right = -79.2308
+offset_bottom = 23.8462
+scale = Vector2(26.3698, 15.3532)
+color = Color(0, 0, 0, 1)
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

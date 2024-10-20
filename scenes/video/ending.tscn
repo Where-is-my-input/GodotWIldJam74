@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://kjqvy2fp6el8"]
+
+[ext_resource type="VideoStream" path="res://assets/video/ed1.ogv" id="1_db1vr"]
+[ext_resource type="Script" path="res://scenes/video/ending.gd" id="1_yhl07"]
+
+[node name="ending" type="Node2D"]
+position = Vector2(69, 0)
+scale = Vector2(0.38, 0.38)
+script = ExtResource("1_yhl07")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("1_db1vr")
+autoplay = true
+bus = &"Music"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -150
+offset_left = -410.526
+offset_top = -65.7895
+offset_right = -370.526
+offset_bottom = -25.7895
+scale = Vector2(103.974, 52.0513)
+color = Color(0, 0, 0, 1)
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

@@ -52,6 +52,7 @@ func load_level(level_id : int = get_current_level_id()):
 	var level_file = get_level_file(level_id)
 	SceneLoader.load_scene(level_file, true)
 	emit_signal("level_load_started")
+	print("Level loading: ", level_file)
 	await(SceneLoader.scene_loaded)
 	current_level = _attach_level(SceneLoader.get_resource())
 	emit_signal("level_loaded")

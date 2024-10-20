@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://crxi2m4ac5sat"]
+
+[ext_resource type="Script" path="res://scenes/minigame/minigame_spawner.gd" id="1_dj1gv"]
+[ext_resource type="Texture2D" uid="uid://buhkepw4x46cg" path="res://assets/sprites/void.png" id="2_amx1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gb7vk"]
+size = Vector2(64, 64)
+
+[node name="minigame_spawner" type="Node2D"]
+script = ExtResource("1_dj1gv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gb7vk")
+debug_color = Color(0.726947, 0.47536, 3.85046e-07, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.129555, 0.129555)
+texture = ExtResource("2_amx1n")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
