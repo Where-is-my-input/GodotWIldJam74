@@ -1,5 +1,6 @@
 extends Node
 @onready var minigames: Node = $minigames
+@onready var canvas_layer: CanvasLayer = $CanvasLayer
 
 signal level_won
 signal level_lost
@@ -18,3 +19,7 @@ func _on_win_button_pressed():
 
 func minigameCompleted():
 	minigamesCompleted += 1
+	deleteOneVoid()
+
+func deleteOneVoid():
+	canvas_layer.get_child(0).queue_free()

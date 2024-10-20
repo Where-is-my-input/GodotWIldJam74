@@ -5,6 +5,7 @@ extends StaticBody2D
 
 
 func _on_a_2d_interact_area_entered(area: Area2D) -> void:
+	if !area.is_in_group("interact"): return
 	#collision_shape_2d.disabled = !collision_shape_2d.disabled
 	#navigation_obstacle_2d.set_carve_navigation_mesh(!collision_shape_2d.disabled)
 	collision_shape_2d.set_deferred("disabled", !collision_shape_2d.disabled)

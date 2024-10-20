@@ -196,7 +196,7 @@ scale = Vector2(1.839, 1.839)
 sprite_frames = SubResource("SpriteFrames_ultv2")
 animation = &"Up"
 
-[node name="Kick" type="Area2D" parent="."]
+[node name="Kick" type="Area2D" parent="." groups=["interact"]]
 disable_mode = 2
 collision_layer = 2
 collision_mask = 0

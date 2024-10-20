@@ -15,7 +15,6 @@ var target:Node2D = null
 			#var targetPosition = navigation_agent_2d.get_next_path_position()
 
 func _physics_process(delta: float) -> void:
-	print(player)
 	if player != null:
 		if !testFinalPos():
 			player = null
