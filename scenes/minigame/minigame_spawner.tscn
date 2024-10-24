@@ -24,4 +24,16 @@ one_shot = true
 scale = Vector2(0.129555, 0.129555)
 texture = ExtResource("2_amx1n")
 
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 10
+y_sort_enabled = true
+offset_left = -40.0
+offset_top = -64.0
+offset_right = 44.0
+offset_bottom = -41.0
+text = "E - Interact"
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

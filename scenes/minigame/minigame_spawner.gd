@@ -1,10 +1,13 @@
 extends Node2D
+@onready var label: Label = $Label
+#@onready var label: Label = $CanvasLayer/Label
 
 @export var minigame:int = 0
 @onready var timer: Timer = $Timer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 var player = null
+var childrenCount = 0
 
 signal minigameCompleted
 
@@ -13,11 +16,13 @@ const MINIGAME_1 = preload("res://scenes/minigame/minigame_1.tscn")
 const MINIGAME_2 = preload("res://scenes/minigame/minigame_2.tscn")
 const MINIGAME_3 = preload("res://scenes/minigame/minigame_3.tscn")
 
+func _ready() -> void:
+	childrenCount = get_child_count()
+
 func _physics_process(delta: float) -> void:
 	sprite_2d.rotate(-1)
 
 func spawnMinigame():
-	if get_child_count() > 3 || !timer.is_stopped(): return
 	var spawn = null
 	match minigame:
 		1:
@@ -36,6 +41,7 @@ func spawnMinigame():
 	spawn.connect("minigameClosed", closed)
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	if get_child_count() > childrenCount || !timer.is_stopped(): return
 	if !timer.is_stopped(): return
 	spawnMinigame()
 	player = area.get_parent()
@@ -49,3 +55,13 @@ func completed():
 func closed():
 	timer.start(1)
 	player.enableControls(true)
+
+
+func _on_area_2d_body_entered(body) -> void:
+	if body.is_in_group("Player"):
+		label.visible = true
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		label.visible = false

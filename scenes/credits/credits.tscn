@@ -10,6 +10,16 @@ attribution_file_path = "res://ATTRIBUTION.md"
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
 text = "[center][font_size=48]Collaborators[/font_size]
 
+[font_size=24]Art[/font_size]
+[url=https://itch.io/profile/makaai]Makaai[/url]
+
+[font_size=24]Programming[/font_size]
+[url=https://itch.io/profile/ikkisoad]Ikkisoad[/url]
+
+[font_size=24]Writing[/font_size]
+[url=]Duzi[/url]
+
+
 [font_size=32]Godot Game Template[/font_size]
 Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
 Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
@@ -21,13 +31,39 @@ Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and c
 Source: [url=https://godotengine.org/]godotengine.org[/url]  
 License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
 
-[font_size=24]Visual Studio Code[/font_size]
-Author: [url=https://opensource.microsoft.com/]Microsoft[/url]  
-Source: [url=https://github.com/microsoft/vscode]github: vscode[/url]  
-License: [url=https://github.com/microsoft/vscode/blob/main/LICENSE.txt]MIT License[/url]
+[font_size=48]Open Game Art[/font_size]
 
-[font_size=24]Git[/font_size]
-Author: [url=https://github.com/torvalds]Linus Torvalds[/url]  
-Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
-License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
-[/center]"
+[font_size=48]Sound Effects[/font_size]
+[font_size=24]Creaky light wooden door[/font_size]
+Author: [url=https://opengameart.org/users/fractilegames]fractilegames[/url]  
+Source: [url=https://opengameart.org/content/creaky-light-wooden-door]opengameart.org[/url]  
+License: [url=https://creativecommons.org/licenses/by/3.0/]CC BY 3.0[/url] 
+
+[font_size=24]Walking in and out through wooden stairs[/font_size]
+Author: [url=https://opengameart.org/users/gallaecio]Gallaecio[/url]  
+Source: [url=https://opengameart.org/content/walking-in-and-out-through-wooden-stairs]opengameart.org[/url]  
+License: [url=https://creativecommons.org/licenses/by-sa/3.0/]CC BY-SA 3.0[/url] 
+License: [url=https://www.gnu.org/licenses/gpl-3.0.html]GPL 3.0[/url] 
+License: [url=https://www.gnu.org/licenses/old-licenses/gpl-2.0.html]GPL 2.0[/url] 
+
+[font_size=48]Sound Track[/font_size]
+[font_size=24]Calm Relax 1 (Synthwave 421k)[/font_size]
+Author: [url=https://opengameart.org/users/cynicmusic]cynicmusic[/url]  
+Source: [url=https://opengameart.org/content/calm-relax-1-synthwave-421k]opengameart.org[/url]  
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CCO[/url] 
+
+[font_size=24]Haunted Woods (Horror Drone)[/font_size]
+Author: [url=https://opengameart.org/users/michael-klier]Michael Klier[/url]  
+Source: [url=https://opengameart.org/content/haunted-woods-horror-drone]opengameart.org[/url]  
+License: [url=https://creativecommons.org/licenses/by-sa/3.0/]CC BY-SA 3.0[/url] 
+
+[font_size=48]Voice Acting[/font_size]
+[font_size=24]Female Distressed No no no[/font_size]
+Author: [url=https://opengameart.org/users/nocturnalvanguard]Nocturnal_Vanguard[/url]  
+Source: [url=https://opengameart.org/content/female-distressed-no-no-no]opengameart.org[/url]  
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CCO[/url] 
+
+[font_size=24]Oh you scared me![/font_size]
+Author: [url=https://opengameart.org/users/nocturnalvanguard]Nocturnal_Vanguard[/url]  
+Source: [url=https://opengameart.org/content/oh-you-scared-me]opengameart.org[/url]  
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CCO[/url] [/center]"

@@ -1,6 +1,7 @@
 extends Node
 @onready var minigames: Node = $minigames
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 signal level_won
 signal level_lost
@@ -23,3 +24,6 @@ func minigameCompleted():
 
 func deleteOneVoid():
 	canvas_layer.get_child(0).queue_free()
+
+func _on_audio_stream_player_finished() -> void:
+	audio_stream_player.play()

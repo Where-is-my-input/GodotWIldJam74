@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://6sai5pssx0d"]
+[gd_scene load_steps=9 format=3 uid="uid://6sai5pssx0d"]
 
 [ext_resource type="Script" path="res://scenes/door/door2D.gd" id="1_oxh2w"]
 [ext_resource type="Script" path="res://scenes/door/door.gd" id="1_p2f6h"]
 [ext_resource type="Texture2D" uid="uid://gi5ei0kms8cx" path="res://assets/sprites/door.png" id="3_35fea"]
+[ext_resource type="Texture2D" uid="uid://dw5xrpsn7livs" path="res://assets/sprites/doorOpen.png" id="4_d02ei"]
 [ext_resource type="AudioStream" uid="uid://c04t318jae78j" path="res://assets/sfx/porta 1.wav" id="4_mcjfn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ox7p"]
@@ -34,6 +35,10 @@ shape = SubResource("RectangleShape2D_62s8t")
 [node name="Sprite2D" type="Sprite2D" parent="door"]
 scale = Vector2(0.260163, 0.186992)
 texture = ExtResource("3_35fea")
+
+[node name="Sprite2D2" type="Sprite2D" parent="door"]
+scale = Vector2(0.26, 0.187)
+texture = ExtResource("4_d02ei")
 
 [node name="sfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_mcjfn")

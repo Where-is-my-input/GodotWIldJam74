@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://yp3262t488rg"]
+[gd_scene load_steps=17 format=3 uid="uid://yp3262t488rg"]
 
 [ext_resource type="PackedScene" uid="uid://bu27h8eg72121" path="res://scenes/menus/main_menu/main_menu.tscn" id="1_ps28m"]
 [ext_resource type="Script" path="res://scenes/menus/main_menu/main_menu_with_animations.gd" id="2_dt6ey"]
+[ext_resource type="Texture2D" uid="uid://duxyy7tthjdf6" path="res://assets/images/Logo.png" id="3_bknyc"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -350,24 +351,41 @@ graph_offset = Vector2(-180.277, 49)
 [node name="MainMenu" instance=ExtResource("1_ps28m")]
 script = ExtResource("2_dt6ey")
 
-[node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+[node name="TextureRect" type="TextureRect" parent="." index="0"]
+modulate = Color(1, 1, 1, 0.513726)
+layout_mode = 2
+offset_right = 1280.0
+offset_bottom = 720.0
+scale = Vector2(1.00137, 1.00137)
+texture = ExtResource("3_bknyc")
+
+[node name="MenuAnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {
 "": SubResource("AnimationLibrary_2kqig")
 }
 
-[node name="MenuAnimationTree" type="AnimationTree" parent="." index="2"]
+[node name="MenuAnimationTree" type="AnimationTree" parent="." index="3"]
 tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
+[node name="VersionMargin" parent="." index="6"]
+visible = false
+
 [node name="VersionContainer" parent="VersionMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
+
+[node name="TitleMargin" parent="MenuContainer" index="0"]
+visible = false
 
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
-text = "Godot Wild Jam #74"
+text = "H-Ight"
+
+[node name="SubTitleMargin" parent="MenuContainer" index="1"]
+visible = false
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
@@ -376,4 +394,8 @@ modulate = Color(1, 1, 1, 0)
 modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+offset_left = 484.0
+offset_top = 63.0
+offset_right = 612.0
+offset_bottom = 271.0
 lock = true

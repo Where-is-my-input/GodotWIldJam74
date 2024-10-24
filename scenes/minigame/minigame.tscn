@@ -77,8 +77,8 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_ejt1n"]
 tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 2
-physics_layer_0/collision_mask = 2
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_2trar")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4t2ws"]
@@ -97,8 +97,8 @@ tile_set = SubResource("TileSet_ejt1n")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="CanvasLayer"]
 position = Vector2(96, 96)
-collision_layer = 2
-collision_mask = 2
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("2_rlodb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/CharacterBody2D"]
@@ -109,8 +109,8 @@ scale = Vector2(-0.13, 0.13)
 texture = ExtResource("4_npn6b")
 
 [node name="end" type="Area2D" parent="CanvasLayer"]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/end"]
 position = Vector2(1184, 608)
